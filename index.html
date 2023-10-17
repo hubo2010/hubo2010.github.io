@@ -1,74 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的博客</title>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>软件下载，纯净，安全，无广告</title>
     <style>
-        /* 在这里添加你的样式 */
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            background: linear-gradient(to bottom, #FFB6C1, #6495ED);
         }
-        
-        header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    opacity: 0.8; /* 设置透明度为50% */
-}
-body {
-    background-image: url("beijing.jfif");
-    background-repeat: no-repeat;
-    background-size: cover; /* 覆盖整个页面 */
-    background-position: center; /* 居中显示背景图像 */
-    background-color: rgb(241, 236, 236); /* 半透明白色背景，以便看到下面的内容 */
-}
-        
         h1 {
-            margin: 0;
+            color: white;
+            text-align: center;
+            padding-top: 150px;
         }
-        
-        main {
-            margin: 20px;
-        }
-        
-        footer {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    opacity: 0.8; /* 设置透明度为50% */
-}
     </style>
-
 </head>
 <body>
-    <header>
-        <h1><p style="color: white;">我的博客</p></h1>
-    </header>
-    <div class="mini-player">
-        <audio controls>
-            <source src="让风告诉你 (游戏《原神》2021拜年纪同人曲) - 花玲,喵☆酱,宴宁,kinsen.mp3" type="audio/mpeg">
-            您的浏览器不支持音频元素。
-        </audio>
-    <main>
-        <!-- 在这里添加你的博客内容 -->
-        <h2><p style="color: white;">Python：一种简单而优雅的编程语言一</p></h2>
-        <p style="color: white;">关于Python的介绍。</p>
-        <a href="wenzhang1.html"><p style="color: white;">查看详情</p></a>
-        
-        <h2><p style="color: white;">博客标题二</p></h2>
-        <p style="color: white;">这是另一篇博客文章的内容。</p>
-        <a href="https://example.com"><p style="color: white;">查看详情</p></a>
-    </main>
-    <footer>
-        <p>&copy; 2023 我的博客. 版权所有.</p>
-    </footer>
+<audio id="bg-music" loop>
+    <source src="mp3\yinyue.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+<div id="audio-controls">
+    <button onclick="toggleAudio()">播放/暂停</button>
+    <button onclick="muteAudio()">静音</button>
+    <button onclick="unmuteAudio()">取消静音</button>
+</div>
+
+<script>
+// 控制背景音乐的播放和静音
+var audio = document.getElementById("bg-music");
+
+function toggleAudio() {
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
+}
+
+function muteAudio() {
+    audio.muted = true;
+}
+
+function unmuteAudio() {
+    audio.muted = false;
+}
+</script>
+     <div class="dltop">
+ <div class="dltopner">
+ <a href="login.html">登录</a>|
+ <a href="register.html">注册</a>
+ </div>
+ </div>
+  <h1>常用软件</h1>
+  
+  <ul>
+     <div class="dltop">
+ <div class="dltopner">
+ <li><a href="ruanjian\WeChatSetup.exe"><p style="color: white;">微信</p></a></li>
+ <li><a href="ruanjian\WeCom_4.1.6.6017.exe"><p style="color: white;">企业微信</p></a></li>
+ <li><a href="ruanjian\QQ9.9.0.14569_x64.exe"><p style="color: white;">QQ</p></a></li>
+ <li><a href="ruanjian\1__9510114.exe"><p style="color: white;">360安全卫士</p></a></li>
+ </div>
+  </ul>
+    <h1>娱乐游戏</h1>
+  <ul>
+  <li><a href="ruanjian\yuanshen.exe"><p style="color: white;">原神</p></a></li>
+  <li><a href="ruanjian\yscloud_3.8.1.exe"><p style="color: white;">云·原神</p></a></li>
+  <li><a href="ruanjian\Bh3_release_2.26.0.0_gw_pc.exe"><p style="color: white;">崩坏3</p></a></li>
+  <li><a href="ruanjian\ldplayer9_ld_6000_ld.exe"><p style="color: white;">雷电模拟器9</p></a></li>
+  <li><a href="ruanjian\mumu12.exe"><p style="color: white;">mumu模拟器12</p></a></li>
+  </ul>
+    <h1>音乐视频</h1>
+  <ul>
+  <li><a href="ruanjian\tengxunshiping.exe"><p style="color: white;">腾讯视频</p></a></li>
+  <li><a href="ruanjian\youku.exe"><p style="color: white;">优酷</p></a></li>
+  <li><a href="ruanjian\aiqiyi.exe"><p style="color: white;">爱奇艺</p></a></li>
+  <li><a href="ruanjian\douyin.exe"><p style="color: white;">抖音</p></a></li>
+  <li><a href="ruanjian\qqmusic.exe"><p style="color: white;">QQ音乐</p></a></li>
+  </ul>
+    <h1>电脑工具</h1>
+  <ul>
+  <li><a href="ruanjian\bandzip.exe"><p style="color: white;">最好用的解压软件-Bandzip</p></a></li>
+  <li><a href="ruanjian\ultraiso.exe"><p style="color: white;">UltraISO软碟通</p></a></li>
+  </ul>
+    <h1>手机软件</h1>
+  <ul>
+  <li><a href="ruanjian\qqshouji.apk"><p style="color: white;">QQ</p></a></li>
+  <li><a href="ruanjian\weixin8038android2400_arm64_1.apk"><p style="color: white;">微信</p></a></li>
+  </ul>
+
+  <!-- 这里可以添加后台控制的功能 -->
+
 </body>
 </html>
