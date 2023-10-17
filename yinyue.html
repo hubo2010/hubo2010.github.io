@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>背景音乐网站</title>
+<style>
+/* 添加一些样式 */
+#audio-controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#audio-controls button {
+    margin: 0 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+</style>
+</head>
+<body>
+<h1>欢迎来到我的网站</h1>
+
+<audio id="bg-music" loop>
+    <source src="mp3\yinyue.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+<div id="audio-controls">
+    <button onclick="toggleAudio()">播放/暂停</button>
+    <button onclick="muteAudio()">静音</button>
+    <button onclick="unmuteAudio()">取消静音</button>
+</div>
+
+<script>
+// 控制背景音乐的播放和静音
+var audio = document.getElementById("bg-music");
+
+function toggleAudio() {
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
+}
+
+function muteAudio() {
+    audio.muted = true;
+}
+
+function unmuteAudio() {
+    audio.muted = false;
+}
+</script>
+
+</body>
+</html>

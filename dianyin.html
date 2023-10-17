@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>电影</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .container {
+      display: flex;
+      align-items: flex-start;
+      max-width: 800px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .movie-list {
+      list-style-type: none;
+      padding: 0;
+      margin-right: 20px;
+    }
+    
+    .movie-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      cursor: pointer;
+    }
+    
+    .movie-poster {
+      width: 80px;
+      height: 80px;
+      margin-right: 10px;
+    }
+    
+    #video-player {
+      flex-grow: 1;
+    }
+    
+    #video {
+      width: 800px;
+      height: 450px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <ul class="movie-list">
+      <li class="movie-item">
+        <img class="movie-poster" src="tupian\1.jpg" alt="电影1">
+        <div>
+          <h3>肖申克的救赎</h3>
+          <p>简介：这是电影1的简介。</p>
+        </div>
+      </li>
+      <li class="movie-item">
+        <img class="movie-poster" src="movie2.jpg" alt="电影2">
+        <div>
+          <h3>电影2</h3>
+          <p>简介：这是电影2的简介。</p>
+        </div>
+      </li>
+      <li class="movie-item">
+        <img class="movie-poster" src="movie3.jpg" alt="电影3">
+        <div>
+          <h3>电影3</h3>
+          <p>简介：这是电影3的简介。</p>
+        </div>
+      </li>
+    </ul>
+    
+    <div id="video-player">
+      <video id="video" controls>
+        <source id="video-source" src="" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  
+  <script>
+    var movieItems = document.querySelectorAll('.movie-item');
+    var videoPlayer = document.getElementById('video-player');
+    var videoSource = document.getElementById('video-source');
+    
+    movieItems.forEach(function(movieItem) {
+      movieItem.addEventListener('click', function() {
+        var movieSrc = this.dataset.src;
+        
+        videoSource.setAttribute('src', movieSrc);
+        videoPlayer.style.display = 'block';
+        
+        var video = document.getElementById('video');
+        video.load();
+        video.play();
+      });
+    });
+  </script>
+</body>
+</html>
